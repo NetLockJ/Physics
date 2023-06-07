@@ -1,5 +1,15 @@
 # Physics
 A 2d Physics simulation because its cool
 
-(It's not near finished yet, but I hope I can eventually make it decently featured)
-Eventually, it will do physics of shape interaction and collisions 
+So far the features are...
+- Gravity
+- Wall Collisions
+- Rebound Collisions off walls
+- Friction on Ground
+
+Features yet to add
+- Shape to Shape collisions
+- Rotation of shapes
+- Grounded shapes
+- Elastic/Inelastic Collisions
+- Friction between shapes
