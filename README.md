@@ -7,7 +7,7 @@ So far the features are...
 - Rebound Collisions off walls
 - Friction on Ground
 
-Features yet to add
+Features yet to add...
 - Shape to Shape collisions
 - Rotation of shapes
 - Grounded shapes
