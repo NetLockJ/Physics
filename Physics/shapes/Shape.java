@@ -56,4 +56,5 @@ public abstract class Shape {
         setCenter(new Vec(center.getX() + velocity.getX() * deltaTime, center.getY() + velocity.getY() * deltaTime));
     }
 
+    public abstract double getMass();
 }

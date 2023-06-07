@@ -57,4 +57,9 @@ public class Circle extends Shape {
     public void setVelocity(Vec v) {
         velocity = v;
     }
+
+    @Override
+    public double getMass() {
+        return mass;
+    }
 }

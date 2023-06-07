@@ -24,8 +24,8 @@ public class GraphicsPanel extends JPanel {
         this.setBackground(Color.black);
         this.setVisible(true);
 
-        new ShapesGenerator(20, 20);
-        // ShapesGenerator.setRandomVelocity();
+        new ShapesGenerator(2, 0);
+        ShapesGenerator.setRandomVelocity();
         
     }
 

@@ -3,6 +3,7 @@ package shapes;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
+import engine.PhysicsEngine;
 import helper.Vec;
 
 public class Rectangle extends Shape {
@@ -10,11 +11,16 @@ public class Rectangle extends Shape {
     private int length = -1;
     private int width = -1;
     private double mass = -1;
+    /**Calculated with sum(f) = ma and f = (u)N and rearranging the variables
+     *  ug = a
+     */
+    private double frictionForce = 0.0;
 
     private Color color = new Color(255, 0 , 0);
 
     private Rectangle() {
         mass = getArea() / 100;
+        frictionForce = PhysicsEngine.COEFFICENT_OF_FRICTION * PhysicsEngine.GRAVITY;
     }
 
 
@@ -34,7 +40,7 @@ public class Rectangle extends Shape {
         this();
         this.length = length;
         this.width = length;
-        center = new Vec(x - length * 0.5d, y - width * 0.5d);
+        center = new Vec(x - length * 0.5, y - width * 0.5d);
     }
 
     public int getLength() {
@@ -70,6 +76,15 @@ public class Rectangle extends Shape {
     @Override
     public void setVelocity(Vec v) {
         velocity = v;
+    }
+
+    @Override
+    public double getMass() {
+        return mass;
+    }
+
+    public double getFrictionAcceleration() {
+        return frictionForce;
     }
     
 }
